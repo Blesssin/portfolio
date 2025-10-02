@@ -1,0 +1,284 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar */
+header {
+  background: #111;
+  padding: 15px 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  color: #fff;
+  font-size: 24px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00ffcc;
+}
+
+/* Home Section */
+.home {
+  height: 100vh;
+  background: linear-gradient(to right, #111, #333);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+/*.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #00ffcc;
+  margin-bottom: 20px;
+}*/
+/* Profile Image Style */
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid #00ffcc;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.6);
+}
+
+/* Animation */
+.animate-img {
+  opacity: 0;
+  transform: scale(0.5) rotate(-20deg);
+  animation: zoomFade 1.5s ease-out forwards;
+}
+
+/* Keyframes */
+@keyframes zoomFade {
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* Hover effect (optional) */
+.profile-pic:hover {
+  transform: scale(1.1) rotate(5deg);
+  transition: 0.4s ease;
+  box-shadow: 0 0 30px #00ffcc;
+}
+/* Text Animation */
+.animate-text {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: textFadeIn 1.5s forwards;
+}
+
+/* Delay for multiple elements */
+.home-content h1 { animation-delay: 0.3s; }
+.home-content p { animation-delay: 0.6s; }
+.home-content .btn { animation-delay: 0.6s; }
+
+/* Keyframes */
+@keyframes textFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional Hover Effect */
+.home-content h1 span {
+  color: #00ffcc;
+  transition: 0.3s;
+}
+
+.home-content h1 span:hover {
+  color: rgb(88, 255, 55);
+  text-shadow: 0 0 10px #46dd38;
+}
+
+.home-content h1 {
+  font-size: 50px;
+}
+
+.home-content span {
+  color: #00ffcc;
+}
+.about {
+  padding: 60px 20px;
+  text-align: center;
+  color: #000303;
+  background-color: #bcf732;
+  animation: pulseBG 3s infinite alternate;
+  border-radius: 15px;
+}
+
+@keyframes pulseBG {
+  from { background-color: #fdfff9; }
+  to { background-color: #00ffcc; }
+}
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #00ffcc;
+  color: #111;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: #00cc99;
+}
+.skills {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.skill-box {
+  margin: 20px auto;
+  max-width: 500px;
+  text-align: left;
+}
+
+.skill-bar {
+  width: 100%;
+  background: #ddd;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  width: 0%;
+  height: 20px;
+  border-radius: 25px;
+  background: #00ffcc;
+  animation: fillSkill 2s forwards;
+}
+
+/* Different width for each skill */
+.skill-fill.html { animation-delay: 0.3s; width: 90%; }
+.skill-fill.js { animation-delay: 0.6s; width: 75%; }
+.skill-fill.responsive { animation-delay: 0.9s; width: 85%; }
+
+/* Keyframes for animation */
+@keyframes fillSkill {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+/* Optional: fade-in for text */
+.animate-skill {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards;
+}
+
+.skills h2 { animation-delay: 0.2s; }
+.skill-box { animation-delay: 0.5s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about, .skills, .projects, .contact {
+  background: #f9f9f9;
+  margin-bottom: 20px;
+}
+#projects {
+  padding: 60px 0px;
+  text-align: center;
+  background: url("../img/gn.jpg") no-repeat center center/cover;
+}
+.project-title {
+  background-color: #f9f9f9;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.projects .project-box{
+  background: #fff;
+  margin: 15px auto;
+  padding: 20px;
+  max-width: 400px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+/* Background Image + Styling */
+.contact {
+  background: url("../img/black-green-material-perforated-vector-header-design-banner-with-polygonal-grid-blank-space_258339-186.webp") no-repeat center center/cover;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+}
+
+/* Fade-in Animation */
+.animate {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1.5s forwards;
+}
+
+/* Delay effect for each element */
+.contact h2 { animation-delay: 0.2s; }
+.contact p { animation-delay: 0.5s; }
+.contact .socials { animation-delay: 0.8s; }
+
+/* Keyframes */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Contact Links Hover Effect */
+.contact a {
+  color: #00ffcc;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: 0.3s;
+}
+
+.contact a:hover {
+  color: rgb(103, 255, 83);
+  text-shadow: 0 0 10px rgb(80, 255, 80), 0 0 20px rgb(80, 255, 109);
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
